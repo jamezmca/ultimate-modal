@@ -29,6 +29,7 @@
     padding: 20px 0;
     text-transform: uppercase;
     letter-spacing: 4px;
+    user-select: none;
 }
 
 .modalContent div {

@@ -2,9 +2,17 @@ import React, { useState } from 'react'
 import Modal from './components/Modal';
 function App() {
   const [openModal, setOpenModal] = useState(false)
+  //TALK ABOUT HOW YOU COULD MAKE A CLOSE MODAL HANDLER
+  function closeModalHandler() {
+    setOpenModal(false)
+  }
+
   return (
     <div style={{ height: '100vh', position: 'relative' }}>
-      <Modal title="my crappy modal" open={openModal} closeModal={() => setOpenModal(false)}>
+      <Modal title="my crappy modal" open={openModal}
+        // closeModal={() => setOpenModal(false)}
+        closeModal={closeModalHandler}
+      >
         <div style={{ border: '2px solid turquoise' }}>
           THIS is MY only child
 
