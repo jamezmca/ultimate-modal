@@ -1,0 +1,38 @@
+.modal {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: black;
+    opacity: 0.7;
+}
+
+.modalContent {
+    position: relative;
+    z-index: 10;
+    width: 600px;
+    height: 600px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalContent div {
+    box-shadow: inset 0 0 4px 4px yellow;
+    flex: 1;
+}
+
+.closeButton {
+    background: purple;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0 auto;
+}

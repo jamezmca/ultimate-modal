@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react'
+import Modal from './components/Modal';
 function App() {
+  const [openModal, setOpenModal] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: '100vh', position: 'relative' }}>
+      <Modal title="my crappy modal" open={openModal} closeModal={() => setOpenModal(false)}>
+        <div style={{ border: '2px solid turquoise' }}>
+          THIS is MY only child
+
+        </div>
+      </Modal>
+      <div style={{
+        display: 'grid',
+        placeItems: 'center',
+        cursor: 'pointer'
+      }}
+        onClick={() => setOpenModal(true)}>
+        OPEN CRAPPY MODAL
+      </div>
     </div>
   );
 }
