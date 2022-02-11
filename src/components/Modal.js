@@ -37,7 +37,7 @@ export default function Modal(props) {
             <div className={styles.modalBackground} ref={modalRef}></div>
             <div className={styles.modalContent}>
                 <div>
-                    {title && <h1 className={styles.modalHeader}>{title}</h1>}
+                    {title && <h1 className={`${styles.modalHeader} font-effect-fire-animation`}>{title}</h1>}
                     {children ?
                         <>
                             {children}
